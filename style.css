@@ -1,14 +1,14 @@
 body {
-    background-image: url("./img/Refreshing-green-grass-background-vector-01.webp");
+    background-image: url("./img/background_image.jpg");
 }
 
 h1 {
     margin: 10px;
     color: rgb(230, 230, 230);
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px rgb(0, 0, 0);
     text-align: center;
-    font-family: 'VT323', Arial, Helvetica, sans-serif;
-    font-size: 5em;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 4em;
 }
 
 .container {
@@ -22,6 +22,31 @@ canvas {
 }
 
 #score {
+    background-color: rgb(197, 5, 240);
+    width: 150px;
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px black;
+    text-align: center;
+    color: rgb(230, 230, 230);
+    text-shadow: 2px 2px black;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+#parent_start_stop{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#start-stop{
+   width:400px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ #start{
     background-color: rgb(96, 108, 56);
     width: 150px;
     margin: 10px auto;
@@ -31,12 +56,24 @@ canvas {
     text-align: center;
     color: rgb(230, 230, 230);
     text-shadow: 2px 2px black;
-    font-family: 'VT323', Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 1em;
+} 
+#reset{
+    background-color: rgb(197, 3, 3);
+    width: 150px;
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px black;
+    text-align: center;
+    color: rgb(230, 230, 230);
+    text-shadow: 2px 2px black;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 1em;
 }
-
 #high-score {
-    background-color: rgb(96, 108, 56);
+    background-color: rgb(197, 5, 240);
     width: 200px;
     margin: 10px auto;
     border: 1px solid black;
@@ -45,10 +82,42 @@ canvas {
     text-align: center;
     color: rgb(230, 230, 230);
     text-shadow: 2px 2px black;
-    font-family: 'VT323', Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
 }
 
 #score p {
     margin: 3% 7%;
+}
+
+
+
+
+/* Your existing CSS code */
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-image:  url("./img/background_image.jpg");
+    }
+
+    h1 {
+        font-size: 2em; 
+    }
+
+    .container {
+        flex-direction: column; 
+    }
+
+    canvas {
+        width: 100%; 
+        height: auto; 
+    }
+
+    #score, #high-score, #start, #reset {
+        width: 100%; 
+    }
+
+    #score p {
+        margin: 3% 0; 
+    }
 }
